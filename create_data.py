@@ -69,8 +69,11 @@ def create_data_vov():
                 start = j
                 break
             type = 'person'
-            tl = (int(frame_label[8]), int(frame_label[9]))
-            br = (int(frame_label[10]), int(frame_label[11]))
+            tl = (int(frame_label[8]) if frame_label[8] >= 0 else 0, 
+                  int(frame_label[9]) if frame_label[9] >= 0 else 0)
+
+            br = (int(frame_label[10]) if frame_label[10] >= 0 else 0, 
+                  int(frame_label[11]) if frame_label[11] >= 0 else 0)
             crop = frame[tl[1]:br[1],tl[0]:br[0]]
             name = str(j)+'.jpg'
             print(name)
