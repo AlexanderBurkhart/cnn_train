@@ -1,0 +1,1 @@
+Epoch		Train-loss		Test-loss		pred@1		pred@5		learningRate
